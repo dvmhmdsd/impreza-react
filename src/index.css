@@ -1,14 +1,391 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: rgb(249, 160, 44);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  letter-spacing: 2px;
+  overflow-x: hidden;
+}
+
+#component {
+  margin-top: 800px;
+}
+
+.section {
+  padding-top: 80px;
+}
+
+
+/* navbar styles */
+.navbar {
+  background-color: transparent;
+  font-size: 1.2rem;
+  z-index: 999;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar.scrolled {
+  background: #fff;
+  box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.navbar.scrolled.navbar-light .navbar-nav .nav-item a.nav-link, .navbar.scrolled .navbar-brand {
+  color: #000;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-brand:hover {
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item a.nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-nav {
+  text-transform: uppercase;
+}
+
+.navbar .navbar-nav li {
+  padding-right: 10px;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item a.nav-link:hover {
+  color: var(--main-color);
+  transition: color 0.2s ease-in;
+}
+
+
+
+
+#header .overlay:after {
+  bottom: -9px;
+  transform: skewY(-6deg);
+  transform-origin: 100%;
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 20%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+#header .overlay:before {
+  bottom: -80px;
+  transform: skewY(6deg);
+  transform-origin: 100%;
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 20%;
+  width: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+#header .bg-video {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  min-height: 70%;
+  min-width: 100%;
+  height: 70%;
+  width: auto;
+  transform: translate(-50%,-50%);
+  border: none;
+}
+
+#header .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#header .header-content {
+  position: absolute;
+  top: 20%;
+  left: 9%;
+  color: #fff;
+  text-align: center;
+}
+
+#header .header-content .title {
+  text-transform: uppercase;
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+#header .header-content .sub-title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin-bottom: 90px;
+}
+
+#header .header-content button {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  outline: 0;
+  font-weight: bold;
+  margin: 10px;
+}
+
+#header .header-content .bg-color {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+
+
+
+#project header {
+  margin-bottom: 90px;
+}
+
+#project header h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#project  header p {
+  font-weight: 600;
+  padding: 0 20%;
+}
+
+#project header .colored {
+  color: var(--main-color);
+}
+
+.grid .project {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.grid .project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.grid .project a {
+  position: absolute;
+  bottom: 55px;
+  z-index: 3;
+  color: #fff;
+  font-weight: bold;
+}
+
+.grid .project .bg-img {
+  width: 100%;
+  height: 100%;
+  padding: 200px;
+  background-image: url('http://impreza2.us-themes.com/wp-content/uploads/2015/05/image-12-e1432216302448-500x333.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+}
+
+.grid .project:hover .overlay {
+  background-color: rgba(249, 160, 44, 0.6);
+}
+
+.grid .project:hover .bg-img {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+#services .section {
+  background-color: #f6f6f6
+}
+
+#services header {
+  margin-bottom: 90px;
+}
+
+#services header h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#services header p {
+  font-weight: 600;
+  padding: 0 20%;
+}
+
+#services header .colored {
+  color: var(--main-color);
+}
+
+.ser-item {
+  text-align: center;
+  padding: 20px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.ser-item h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.ser-item i {
+  font-size: 3rem;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.ser-image {
+  background-image: url('http://impreza2.us-themes.com/wp-content/uploads/2015/04/shutterstock_258743255.jpg?id=1030');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
+
+#team .section {
+  background-color: #f6f6f6;
+  padding-bottom: 80px;
+}
+
+#team header {
+  margin-bottom: 90px;
+}
+
+#team header h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#team header p {
+  font-weight: 600;
+  padding: 0 20%;
+}
+
+#team header .colored {
+  color: var(--main-color);
+}
+
+
+
+
+.fac-item {
+  padding: 30px;
+  background: var(--main-color);
+  color: #fff;
+}
+
+.fac-item .fac-number {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.fac-item.lighter {
+  background: rgba(249, 160, 44, 0.9);
+}
+
+.fac-tem {
+  color: #fff;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fac-tem a {
+  color: #eee;
+  font-size: 3.4rem;
+  padding: 50px;
+}
+
+
+
+#footer .section {
+  background: #000;
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+#footer header {
+  margin-bottom: 90px;
+}
+
+#footer header h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#footer header p {
+  font-weight: 600;
+  padding: 0 20%;
+}
+
+#footer header .colored {
+  color: var(--main-color);
+}
+
+#footer .col-md-6 {
+  padding: 20px;
+}
+
+
+.con-info p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.con-info p i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid var(--main-color);
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  padding: 20px;
+}
+
+
+
+.btn {
+  background: var(--main-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
